@@ -4,7 +4,6 @@
 import Field from './field'
 import Character from './character'
 import Tasklist from './tasklist'
-import Task from './task'
 
 const field = new Field(4)
 field.init()
