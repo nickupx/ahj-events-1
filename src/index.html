@@ -7,7 +7,18 @@
   <title>Document</title>
 </head>
 <body>
-  <div align="center">
+  <div id="tasklist">
+    <input id="tl-input">
+    <div id="tl-pinned">
+      <h4 class="tl-header">Pinned</h4>
+      <div id="tl-pinned-list">No pinned tasks</div>
+    </div>
+    <div id="tl-all">
+      <h4 class="tl-header">All tasks</h4>
+      <div id="tl-all-list">No tasks</div>
+    </div>
+  </div>
+  <div align="center" style="margin-top: 5em;">
     Попаданий: <span id="hits">0</span><br>
     Промахов: <span id="misses">0</span>
   </div>

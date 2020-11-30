@@ -3,6 +3,8 @@
 /* eslint-disable no-plusplus */
 import Field from './field'
 import Character from './character'
+import Tasklist from './tasklist'
+import Task from './task'
 
 const field = new Field(4)
 field.init()
@@ -31,3 +33,19 @@ field.container.addEventListener('click', (event) => {
 })
 
 setInterval(move, 1000)
+
+// filter
+
+const tasklist = new Tasklist()
+
+const input = document.getElementById('tl-input')
+
+input.addEventListener('keyup', (event) => {
+  tasklist.filter(input.value)
+
+  if (input.value !== '' && event.keyCode === 13) {
+    tasklist.add(input.value)
+    input.value = ''
+    tasklist.renderTasks()
+  }
+})
